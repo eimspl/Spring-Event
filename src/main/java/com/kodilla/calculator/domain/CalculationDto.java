@@ -2,9 +2,9 @@ package com.kodilla.calculator.domain;
 
 public class CalculationDto {
 
-    double num1;
-    double num2;
-    CalculationType operation;
+    public double num1;
+    public double num2;
+    public CalculationType operation;
 
     public CalculationDto(Character sign, double number1, double number2) {
         this.operation = CalculationType.valueOf(sign);

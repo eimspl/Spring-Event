@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/calculator")
 public class CalculatorController implements ApplicationEventPublisherAware {
 
-    CalculationService service;
-    ApplicationEventPublisher publisher;
+    private CalculationService service;
+    private ApplicationEventPublisher publisher;
 
     public CalculatorController(CalculationService service) {
         this.service = service;
     }
 
-    @PostMapping(path = "/calculate")
+    @PostMapping(path = "/calculation")
     public @ResponseBody
     double calculate(@RequestBody CalculationDto calculationDto) {
         double result = performCalculation(calculationDto);
